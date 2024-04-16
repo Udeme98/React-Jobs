@@ -1,4 +1,10 @@
+import ImportantInfo from "./Important Info/ImportantInfo";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <ImportantInfo />
+    </>
+  );
 };
 export default App;
