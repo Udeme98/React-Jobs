@@ -1,9 +1,17 @@
-import ImportantInfo from "./Important Info/ImportantInfo";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import HomeCards from "./components/HomeCards";
+import JobListings from "./components/JobListings";
+import ViewJobs from "./components/ViewJobs";
 
 const App = () => {
   return (
     <>
-      <ImportantInfo />
+      <Navbar />
+      <Hero />
+      <HomeCards />
+      <JobListings />
+      <ViewJobs />
     </>
   );
 };
