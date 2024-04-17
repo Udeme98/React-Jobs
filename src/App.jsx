@@ -4,21 +4,13 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import HomeCards from "./components/HomeCards";
-import JobListings from "./components/JobListings";
-import ViewJobs from "./components/ViewJobs";
+import HomePage from "./pages/HomePage";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(<Route index element={<HomePage />} />)
+);
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <HomeCards />
-      <JobListings />
-      <ViewJobs />
-    </>
-  );
+  return <RouterProvider router={router} />;
 };
 export default App;
