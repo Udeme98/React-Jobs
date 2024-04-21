@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import JobListing from "./JobListing";
 
 const JobListings = ({ isHome = false }) => {
-  const jobListings = isHome ? jobs.slice(0, 3) : jobs;
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // const jobListings = isHome ? jobs.slice(0, 3) : jobs;
   // const recentJobs = jobs.slice(0, 3);
 
   return (
