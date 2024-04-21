@@ -2,11 +2,20 @@ import { useEffect, useState } from "react";
 import JobListing from "./JobListing";
 
 const JobListings = ({ isHome = false }) => {
+  // const jobListings = isHome ? jobs.slice(0, 3) : jobs;
+  // const recentJobs = jobs.slice(0, 3);
+
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // const jobListings = isHome ? jobs.slice(0, 3) : jobs;
-  // const recentJobs = jobs.slice(0, 3);
+  useEffect(() => {
+    const fetchJobs = async () => {
+      const res = await fetch("https://localhost:8000/jobs");
+      const data = await res.json();
+      setJobs(data);
+    };
+    fetchJobs();
+  }, []);
 
   return (
     <section className="bg-blue-50 px-4 py-10">
@@ -15,7 +24,7 @@ const JobListings = ({ isHome = false }) => {
           {isHome ? "Recent Jobs" : "Browse Jobs"}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {jobListings.map((job) => (
+          {jobs.map((job) => (
             <JobListing key={job.id} job={job} />
           ))}
         </div>
