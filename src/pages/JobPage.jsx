@@ -2,7 +2,7 @@ import { useParams, useLoaderData } from "react-router-dom";
 
 const JobPage = () => {
   // Fetching data using React-router DataLoader
-  const { id } = useParams();
+  //   const { id } = useParams();
   const job = useLoaderData();
 
   return <h2>{job.title}</h2>;
