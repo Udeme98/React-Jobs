@@ -1,17 +1,16 @@
 import { useParams, useLoaderData } from "react-router-dom";
 
-const JobPage = () => {
-  // Fetching data using React-router DataLoader
-  //   const { id } = useParams();
-  const job = useLoaderData();
-
-  return <h2>{job.title}</h2>;
-};
-
 const jobLoader = async ({ params }) => {
   const res = await fetch(`/api/jobs/${params.id}`);
   const data = await res.json();
   return data;
+};
+const JobPage = () => {
+  // Fetching data using React-router DataLoader
+  const { id } = useParams();
+  const job = useLoaderData();
+
+  return <h2>{job.title}</h2>;
 };
 
 export { JobPage as default, jobLoader };
