@@ -39,6 +39,30 @@ const ImportantInfo = () => {
       <h2 className="text-2xl mt-2">JavaScript Syntax Extension (JSX):</h2>
       <p>An HTML-like syntax within JavaScript (component).</p>
     </>
+
+    // using state to manage data fetching:
+
+    // import { useEffect, useState } from "react";
+    // import Spinner from "../components/Spinner";
+
+    //  const [job, setJob] = useState(null);
+    //  const [loading, setLoading] = useState(true);
+
+    //   useEffect(() => {
+    //     const fetchJob = async () => {
+    //       try {
+    //         const res = await fetch(`/api/jobs/${id}`);
+    //         const data = await res.json();
+    //         setJob(data);
+    //         // console.log(data);
+    //       } catch (error) {
+    //         console.log("Error fetching data", error);
+    //       } finally {
+    //         setLoading(false);
+    //       }
+    //     };
+    //     fetchJob();
+    //   }, []);
   );
 };
 export default ImportantInfo;
