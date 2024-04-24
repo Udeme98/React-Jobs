@@ -1,4 +1,4 @@
-import { useParams, useLoaderData, Link } from "react-router-dom";
+import { useParams, useLoaderData, Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 
 const jobLoader = async ({ params }) => {
@@ -6,10 +6,24 @@ const jobLoader = async ({ params }) => {
   const data = await res.json();
   return data;
 };
-const JobPage = () => {
+
+const JobPage = ({ deleteJob }) => {
   // Fetching data using React-router DataLoader
   const { id } = useParams();
   const job = useLoaderData();
+
+  const navigate = useNavigate();
+
+  const onDeleteJob = (jobId) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete job?"
+    );
+    if (!confirmDelete) return;
+
+    deleteJob(jobId);
+
+    navigate("/jobs");
+  };
 
   const { name, description, contactEmail, contactPhone } = job.company;
 
@@ -88,7 +102,10 @@ const JobPage = () => {
                 >
                   Edit Job
                 </Link>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                <button
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                  onClick={() => onDeleteJob(job.id)}
+                >
                   Delete Job
                 </button>
               </div>
