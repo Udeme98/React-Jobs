@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "6d41",
+      "title": "Frontend Developer",
+      "type": "Part-Time",
+      "location": "London",
+      "description": "A front developer role",
+      "salary": "$50K - 60K",
+      "company": {
+        "name": "Udeme's",
+        "description": "Awesome company",
+        "contactEmail": "udeme@mail",
+        "contactPhone": "1234"
+      }
     }
   ]
 }
