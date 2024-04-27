@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-indigo-700">
@@ -10,54 +12,54 @@ const Footer = () => {
             <img src="img/logo-white.svg" className="h-8" />
           </div>
           <div className="flex justify-center space-x-4">
-            <a href="#">
+            <Link to="#">
               <img src="img/icon-facebook.svg" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <img src="img/icon-youtube.svg" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <img src="img/icon-twitter.svg" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <img src="img/icon-pinterest.svg" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <img src="img/icon-instagram.svg" />
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="flex justify-around space-x-32">
           <div className="flex flex-col space-y-3 text-white">
-            <a href="#" className="hover:text-brightRed">
+            <Link to="#" className="hover:text-brightRed">
               Home
-            </a>
-            <a href="#" className="hover:text-brightRed">
+            </Link>
+            <Link to="#" className="hover:text-brightRed">
               Pricing
-            </a>
-            <a href="#" className="hover:text-brightRed">
+            </Link>
+            <Link to="#" className="hover:text-brightRed">
               Product
-            </a>
-            <a href="#" className="hover:text-brightRed">
+            </Link>
+            <Link to="#" className="hover:text-brightRed">
               About
-            </a>
+            </Link>
           </div>
-          <div className="flex flex-col space-y-3 text-white">
-            <a href="#" className="hover:text-brightRed">
+          {/* <div className="flex flex-col space-y-3 text-white">
+            <Link to="#" className="hover:text-brightRed">
               Careers
-            </a>
-            <a href="#" className="hover:text-brightRed">
+            </Link>
+            <Link to="#" className="hover:text-brightRed">
               Community
-            </a>
-            <a href="#" className="hover:text-brightRed">
+            </Link>
+            <Link to="#" className="hover:text-brightRed">
               Privacy Policy
-            </a>
-          </div>
+            </Link>
+          </div> */}
         </div>
 
         <div className="flex flex-col justify-between">
-          <form>
+          {/* <form>
             <div className="flex space-x-3">
               <input
                 type="text"
@@ -68,7 +70,7 @@ const Footer = () => {
                 Go
               </button>
             </div>
-          </form>
+          </form> */}
           <div className="hidden text-white md:block">
             Copyright &copy; 2023. All Right Reserved
           </div>
