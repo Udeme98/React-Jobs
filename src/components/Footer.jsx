@@ -30,8 +30,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-around space-x-32">
-          <div className="flex flex-col space-y-3 text-white">
+        <div className="flex justify-around space-x-32 md:space-x-0">
+          <div className="flex flex-col space-y-3 text-white md:flex-row md:space-x-10 md:space-y-0">
             <Link to="#" className="hover:text-brightRed">
               Home
             </Link>
@@ -45,35 +45,10 @@ const Footer = () => {
               About
             </Link>
           </div>
-          {/* <div className="flex flex-col space-y-3 text-white">
-            <Link to="#" className="hover:text-brightRed">
-              Careers
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
-              Community
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
-              Privacy Policy
-            </Link>
-          </div> */}
         </div>
 
-        <div className="flex flex-col justify-between">
-          {/* <form>
-            <div className="flex space-x-3">
-              <input
-                type="text"
-                className="flex-1 px-4 rounded-full focus:outline-none"
-                placeholder="Updated in your inbox"
-              />
-              <button className="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">
-                Go
-              </button>
-            </div>
-          </form> */}
-          <div className="hidden text-white md:block">
-            Copyright &copy; 2023. All Right Reserved
-          </div>
+        <div className="hidden text-white md:block">
+          Copyright &copy; 2023. All Right Reserved
         </div>
       </div>
     </footer>
