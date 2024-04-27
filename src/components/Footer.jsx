@@ -14,26 +14,26 @@ const Footer = () => {
             <img className="h-10 w-auto mb-5" src={logo} alt="React Jobs" />
           </div>
           <div className="flex justify-center space-x-4">
-            <FaYoutube className="inline-block text-3xl text-white" />
-            <FaLinkedin className="inline-block text-3xl text-white" />
-            <FaTwitter className="inline-block text-3xl text-white" />
-            <FaFacebook className="inline-block text-3xl text-white" />
+            <FaYoutube className="inline-block text-3xl text-white cursor-pointer" />
+            <FaLinkedin className="inline-block text-3xl text-white cursor-pointer" />
+            <FaTwitter className="inline-block text-3xl text-white cursor-pointer" />
+            <FaFacebook className="inline-block text-3xl text-white cursor-pointer" />
           </div>
         </div>
 
         <div className="flex justify-around space-x-32 md:space-x-0">
           <div className="flex flex-col space-y-3 text-white md:flex-row md:space-x-10 md:space-y-0">
-            <Link to="#" className="hover:text-brightRed">
+            <Link to="/" className="font-bold text-lg">
               Home
             </Link>
-            <Link to="#" className="hover:text-brightRed">
-              Pricing
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
-              Product
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
+            <Link to="#" className="font-bold text-lg">
               About
+            </Link>
+            <Link to="/jobs" className="font-bold text-lg">
+              Jobs
+            </Link>
+            <Link to="#" className="font-bold text-lg">
+              FAQ
             </Link>
           </div>
         </div>
