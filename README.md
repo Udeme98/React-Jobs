@@ -18,4 +18,4 @@ This repository contains a code for a website about looking for React jobs.
 
 **Roast Toastify:** This package is installed to add toast notifications to the react-job application, to notify when a new job is added, or an existing job has been edited (updated) or even deleted.
 
-![React-Jobs Homepage](/react-jobs/src/assets/images/re-jobs.png)
+![React-Jobs Homepage](/src/assets/images/re-jobs.png)
